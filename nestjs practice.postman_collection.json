@@ -1,0 +1,856 @@
+{
+	"info": {
+		"_postman_id": "0de821bb-93a3-4621-957f-80c6c780c279",
+		"name": "nestjs practice",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24039018"
+	},
+	"item": [
+		{
+			"name": "get user profile",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3QzQHRlc3QuY29tIiwic3ViIjoiNjM4YzYzNjI3MzE0Y2ExZGM1ZjE3YjQwIiwicm9sZXMiOiJDbGllbnQiLCJpYXQiOjE2NzAxNDQ5MDcsImV4cCI6MTY3MDE0NTQwN30.yEBvejZeGCPNu__sygP_tnTyyl7ocld4LzDn2V_g3os",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/auth/profile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"test2@test.com\",\r\n    \"password\": \"test2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"test1@test.com\",\r\n    \"password\": \"test1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "246"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"f6-1hNql4vq6c73ZRiBIoWMILAzGQw\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 30 Nov 2022 19:14:15 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"access_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3QxQHRlc3QuY29tIiwic3ViIjoiNjM4N2FiM2YyZDNmZDRmMmU1ZjA3ZDFjIiwiaXNBZG1pbiI6ZmFsc2UsImlhdCI6MTY2OTgzNTY1NSwiZXhwIjoxNjY5ODM2MTU1fQ.kFV-oB4T0kmZtumjCYSpQHdSJxULeX23k0BeeqQ8Jm0\"\n}"
+				}
+			]
+		},
+		{
+			"name": "signup a user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"test3@test.com\",\r\n    \"password\": \"test3\",\r\n    \"firstName\": \"joe3\",\r\n    \"lastName\": \"tannous3\",\r\n    \"isVIP\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/auth/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "signup a user",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"test3@test.com\",\r\n    \"password\": \"test3\",\r\n    \"firstName\": \"joe3\",\r\n    \"lastName\": \"tannous3\",\r\n    \"isVIP\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/auth/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "146"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"92-f7M4YO6JWQheAsAFFrFrDV2RJH8\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 04 Dec 2022 09:07:46 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"638c63627314ca1dc5f17b40\",\n    \"email\": \"test3@test.com\",\n    \"firstName\": \"joe3\",\n    \"lastName\": \"tannous3\",\n    \"type\": \"Client\",\n    \"isVIP\": true,\n    \"complaintsId\": []\n}"
+				}
+			]
+		},
+		{
+			"name": "add a complaint",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3QzQHRlc3QuY29tIiwic3ViIjoiNjM4YzYzNjI3MzE0Y2ExZGM1ZjE3YjQwIiwicm9sZXMiOiJDbGllbnQiLCJpYXQiOjE2NzAxNDQ5MDcsImV4cCI6MTY3MDE0NTQwN30.yEBvejZeGCPNu__sygP_tnTyyl7ocld4LzDn2V_g3os",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"test2 from joe3\",\r\n    \"body\": \"test2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/complaints",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"complaints"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all user complaints",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3QzQHRlc3QuY29tIiwic3ViIjoiNjM4YzYzNjI3MzE0Y2ExZGM1ZjE3YjQwIiwicm9sZXMiOiJDbGllbnQiLCJpYXQiOjE2NzAxNDQ5MDcsImV4cCI6MTY3MDE0NTQwN30.yEBvejZeGCPNu__sygP_tnTyyl7ocld4LzDn2V_g3os",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/complaints",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"complaints"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get all user complaints",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/complaints",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"complaints"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "311"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"137-+rb6XuU/X30m4CSLCGy9XosQRVs\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 04 Dec 2022 09:09:58 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"email\": \"test3@test.com\",\n    \"complaints\": [\n        {\n            \"_id\": \"638c63cd7314ca1dc5f17b43\",\n            \"title\": \"test from joe3\",\n            \"body\": \"test\",\n            \"status\": \"PENDING\",\n            \"createdDate\": \"2022-12-04T09:09:33.656Z\"\n        },\n        {\n            \"_id\": \"638c63d67314ca1dc5f17b48\",\n            \"title\": \"test2 from joe3\",\n            \"body\": \"test2\",\n            \"status\": \"PENDING\",\n            \"createdDate\": \"2022-12-04T09:09:42.903Z\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "update status",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAdGVzdC5jb20iLCJzdWIiOiI2MzhiN2NmNDRmMDkyYWVlNmM5MTI5ZmMiLCJyb2xlcyI6IkFkbWluIiwiaWF0IjoxNjcwMTQ1MDQyLCJleHAiOjE2NzAxNDU1NDJ9.sCOFoTlHYUwrg1qQmh56LxlKgad4FekfoZRoCkIbofU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"status\": \"INPROGRESS\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/complaints/638c63d67314ca1dc5f17b48",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"complaints",
+						"638c63d67314ca1dc5f17b48"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "update status to rejected",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"status\": \"REJECTED\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/complaints/6387abe02d3fd4f2e5f07d22",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"complaints",
+								"6387abe02d3fd4f2e5f07d22"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "169"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"a9-eEEyFfny19Q3SvrYBoMgKu4zZkQ\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 30 Nov 2022 19:24:42 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"6387abe02d3fd4f2e5f07d22\",\n    \"title\": \"test from joe1\",\n    \"body\": \"test\",\n    \"status\": \"REJECTED\",\n    \"createdDate\": \"2022-11-30T19:15:44.736Z\",\n    \"userId\": \"6387ab3f2d3fd4f2e5f07d1c\"\n}"
+				},
+				{
+					"name": "update status",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"status\": \"INPROGRESS\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/complaints/638c63d67314ca1dc5f17b48",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"complaints",
+								"638c63d67314ca1dc5f17b48"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "173"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"ad-DVJU0eKCYY6+/6+3J//LDLHJ+bQ\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 04 Dec 2022 09:14:31 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"638c63d67314ca1dc5f17b48\",\n    \"title\": \"test2 from joe3\",\n    \"body\": \"test2\",\n    \"status\": \"INPROGRESS\",\n    \"createdDate\": \"2022-12-04T09:09:42.903Z\",\n    \"userId\": \"638c63627314ca1dc5f17b40\"\n}"
+				}
+			]
+		},
+		{
+			"name": "getComplaints by status (Optional)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAdGVzdC5jb20iLCJzdWIiOiI2MzhiN2NmNDRmMDkyYWVlNmM5MTI5ZmMiLCJyb2xlcyI6IkFkbWluIiwiaWF0IjoxNjcwMTQ1MDQyLCJleHAiOjE2NzAxNDU1NDJ9.sCOFoTlHYUwrg1qQmh56LxlKgad4FekfoZRoCkIbofU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/complaints/admin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"complaints",
+						"admin"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "getComplaints by status (Optional)",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/complaints/admin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"complaints",
+								"admin"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "650"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"28a-DuLcSENwjZtPYp4KfM5Z6Q5xGMA\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 04 Dec 2022 09:12:47 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"vip\": [\n        {\n            \"_id\": \"638c63cd7314ca1dc5f17b43\",\n            \"title\": \"test from joe3\",\n            \"body\": \"test\",\n            \"status\": \"PENDING\",\n            \"createdDate\": \"2022-12-04T09:09:33.656Z\",\n            \"user\": {\n                \"email\": \"test3@test.com\",\n                \"firstName\": \"joe3\",\n                \"lastName\": \"tannous3\"\n            }\n        },\n        {\n            \"_id\": \"638c63d67314ca1dc5f17b48\",\n            \"title\": \"test2 from joe3\",\n            \"body\": \"test2\",\n            \"status\": \"PENDING\",\n            \"createdDate\": \"2022-12-04T09:09:42.903Z\",\n            \"user\": {\n                \"email\": \"test3@test.com\",\n                \"firstName\": \"joe3\",\n                \"lastName\": \"tannous3\"\n            }\n        }\n    ],\n    \"nonVip\": [\n        {\n            \"_id\": \"638b7ec34f092aee6c912a04\",\n            \"title\": \"test from joe1\",\n            \"body\": \"test\",\n            \"status\": \"REJECTED\",\n            \"createdDate\": \"2022-12-03T16:52:19.215Z\",\n            \"user\": {\n                \"email\": \"test1@test.com\",\n                \"firstName\": \"joe1\",\n                \"lastName\": \"tannous1\"\n            }\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "check the type of a user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"test@test.com\",\r\n    \"password\": \"test\",\r\n    \"firstName\": \"joe\",\r\n    \"lastName\": \"tannous\",\r\n    \"isAdmin\": true,\r\n    \"isVIP\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/auth/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "check the type of a user",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"test@test.com\",\r\n    \"password\": \"test\",\r\n    \"firstName\": \"joe\",\r\n    \"lastName\": \"tannous\",\r\n    \"isAdmin\": true,\r\n    \"isVIP\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/auth/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "103"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"67-cu8UEe7QuZ74hAU9rBsrKVJMcAo\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 03 Dec 2022 16:49:44 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"statusCode\": 400,\n    \"message\": \"a user cannot be admin and client in the same time\",\n    \"error\": \"Bad Request\"\n}"
+				}
+			]
+		},
+		{
+			"name": "login an admin user",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "get all clients complaints filtering by their status",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAdGVzdC5jb20iLCJzdWIiOiI2MzhiN2NmNDRmMDkyYWVlNmM5MTI5ZmMiLCJyb2xlcyI6IkFkbWluIiwiaWF0IjoxNjcwMTQ1NDg3LCJleHAiOjE2NzAxNDU5ODd9.ByJB6ZdxXPx43wc3F8XiKdsCmCEfz_K61kMV5Sdrfvk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/complaints/admin?status=REJECTED",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"complaints",
+						"admin"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "REJECTED"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get all clients complaints filtering by their status",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/complaints/admin?status=PENDING",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"complaints",
+								"admin"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "PENDING"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "230"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"e6-JPsBt+fSUjqP4r6sXx1XMXvoxuA\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 04 Dec 2022 09:18:43 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"vip\": [\n        {\n            \"_id\": \"638c63cd7314ca1dc5f17b43\",\n            \"title\": \"test from joe3\",\n            \"body\": \"test\",\n            \"status\": \"PENDING\",\n            \"createdDate\": \"2022-12-04T09:09:33.656Z\",\n            \"user\": {\n                \"email\": \"test3@test.com\",\n                \"firstName\": \"joe3\",\n                \"lastName\": \"tannous3\"\n            }\n        }\n    ],\n    \"nonVip\": []\n}"
+				},
+				{
+					"name": "get all clients complaints filtering by their status",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/complaints/admin?status=REJECTED",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"complaints",
+								"admin"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "REJECTED"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "231"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"e7-4YFRRBZlTzqZg6JfrL46fK6ZhP4\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 04 Dec 2022 09:19:24 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"vip\": [],\n    \"nonVip\": [\n        {\n            \"_id\": \"638b7ec34f092aee6c912a04\",\n            \"title\": \"test from joe1\",\n            \"body\": \"test\",\n            \"status\": \"REJECTED\",\n            \"createdDate\": \"2022-12-03T16:52:19.215Z\",\n            \"user\": {\n                \"email\": \"test1@test.com\",\n                \"firstName\": \"joe1\",\n                \"lastName\": \"tannous1\"\n            }\n        }\n    ]\n}"
+				}
+			]
+		}
+	]
+}
